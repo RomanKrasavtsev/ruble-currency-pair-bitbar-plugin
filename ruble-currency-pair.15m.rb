@@ -19,7 +19,7 @@ def get_exchange_rate emoji, *currencies
     sign = get_sign emoji, currency
     user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.854.0 Safari/535.2"
 
-    rate = Nokogiri::HTML(open("http://www.investing.com/currencies/#{currency}-rub", 'User-Agent' => user_agent), nil, "UTF-8")
+    rate = Nokogiri::HTML(open("https://www.investing.com/currencies/#{currency}-rub", 'User-Agent' => user_agent), nil, "UTF-8")
       .css("#quotes_summary_current_data")
       .css(".left")
       .css(".inlineblock")
