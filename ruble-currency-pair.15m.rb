@@ -37,11 +37,11 @@ end
 
 def get_sign emoji, currency
   case currency
-  when "USD"
+  when "usd"
     sign  = emoji ? "🇺🇸" : "$"
-  when "EUR"
+  when "eur"
     sign = emoji ? "🇪🇺" : "€"
-  when "GBP"
+  when "gbp"
     sign = emoji ? "🇬🇧" : "£"
   when "CHF"
     sign = emoji ? "🇨🇭" : "Fr"
@@ -74,4 +74,4 @@ end
 # but you should add sign to the method get_sign
 
 emoji = true
-puts get_exchange_rate emoji, "USD", "EUR", "GBP", "CAD"
+puts get_exchange_rate emoji, "usd", "eur", "gbp", "cad"
